@@ -13,4 +13,9 @@ public class Chip extends Item {
 	public String getSound() {
 		return "Crunch Crunch, Yum!";
 	}
+	
+	public int getQuantity() {
+		return super.getQuantity();
+	}
+
 }

@@ -12,6 +12,11 @@ public class Gum extends Item {
 	public String getSound() {
 		return "Chew Chew, Yum!";
 	}
+	
+	public int getQuantity() {
+		return super.getQuantity();
+	}
+
 }
 
 

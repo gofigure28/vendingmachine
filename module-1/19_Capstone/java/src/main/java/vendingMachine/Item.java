@@ -4,17 +4,21 @@ import java.math.BigDecimal;
 
 public abstract class Item {
 	
-	private String slot;
-	private String name;
-	private BigDecimal price;
-	private String type;
+	private final int STARTING_QUANTITY = 5;
 	
+	protected String slot;
+	protected String name;
+	protected BigDecimal price;
+	protected String type;
+	protected int quantity;
 
 	public Item (String name, BigDecimal price, String type, String slot) {
 		this.name = name;
 		this.price = price;
 		this.type = type;
 		this.slot = slot;
+	
+		this.quantity = STARTING_QUANTITY;
 	}
 
 
@@ -60,7 +64,12 @@ public abstract class Item {
 	//Add Override for String
 	
 	public abstract String getSound();
+
+
+	public int getQuantity() {
+		return quantity;
 		
-	
+	}
+		
 
 }

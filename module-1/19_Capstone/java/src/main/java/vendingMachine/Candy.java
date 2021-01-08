@@ -11,9 +11,9 @@ public class Candy extends Item {
 	public String getSound() {
 		return "Munch Munch, Yum!";
 	}
-
-	{
-
+	
+	public int getQuantity() {
+		return super.getQuantity();
 	}
 
 }

@@ -12,8 +12,9 @@ public class Beverages extends Item {
 		return "Glug Glug, Yum!";
 	}
 
-	{
-
+	public int getQuantity() {
+		return super.getQuantity();
 	}
 
+	
 }

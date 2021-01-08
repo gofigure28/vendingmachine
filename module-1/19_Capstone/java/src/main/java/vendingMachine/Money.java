@@ -12,7 +12,7 @@ public class Money {
 	int dime = 10;
 	int nickel = 5;
 
-	public String giveChange() {
+	public String giveChange(BigDecimal balance) {
 
 		while (remainingBalance > 0) {
 			if (remainingBalance > quarter) {
