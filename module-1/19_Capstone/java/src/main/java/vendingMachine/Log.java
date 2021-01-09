@@ -10,11 +10,6 @@ import java.time.LocalTime;
 
 public class Log {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-
 	public void writer(String typeOfTransaction, BigDecimal setScale, BigDecimal balance) {
 
 		LocalDate today = LocalDate.now();

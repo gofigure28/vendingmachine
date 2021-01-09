@@ -16,18 +16,19 @@ import java.util.TreeMap;
 			this.inventory = inventory;
 		}
 
-		public void displayInventory() {
-			for (Map.Entry<String, Item> entry : inventory.entrySet()) {
-				String key = entry.getKey();
-				Item value = entry.getValue();
-				if (value.getQuantity() == 0) {
-					System.out.println(key + " Out of stock");
-				} else {
-
-				}
-				System.out.println(key + " " + (value.getQuantity() - 1));
-			}
-		}
+		//Moved to InventoryLoader so the Vending Machine could display items
+//		public void displayInventory() {
+//			for (Map.Entry<String, Item> entry : inventory.entrySet()) {
+//				String key = entry.getKey();
+//				Item value = entry.getValue();
+//				if (value.getQuantity() == 0) {
+//					System.out.println(key + " Out of stock");
+//				} else {
+//
+//				}
+//				System.out.println(key + " " + (value.getQuantity() - 1));
+//			}
+//		}
 
 		public void feedMoney(int addMoney) {
 			String typeOfTransaction = "FEED MONEY:";
@@ -83,4 +84,7 @@ import java.util.TreeMap;
 			}
 			System.out.println("Your balance is " + balance);
 		}
+		
+		
+		
 	}

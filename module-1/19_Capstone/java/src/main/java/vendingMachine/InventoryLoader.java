@@ -80,8 +80,6 @@ public class InventoryLoader {
 		} else {
 			 item = null;
 		}
-		
-		
 		return item;
 	}
 
@@ -89,7 +87,18 @@ public class InventoryLoader {
 		return this.inventory; 
 	}
 	
-	
+	public void displayInventory() {
+		for (Map.Entry<String, Item> entry : inventory.entrySet()) {
+			String key = entry.getKey();
+			Item value = entry.getValue();
+			if (value.getQuantity() == 0) {
+				System.out.println(key + " Out of stock");
+			} else {
+
+			}
+			System.out.println(key + " " + (value.getQuantity())); 
+		}
+	}
 	
 	public static boolean containsKey(String guestSelection) {
 		
