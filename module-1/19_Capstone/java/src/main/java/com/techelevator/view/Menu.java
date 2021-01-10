@@ -6,6 +6,9 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 
 import vendingMachine.Money;
+import vendingMachine.Purchase;
+import vendingMachine.Item;
+import vendingMachine.InventoryLoader;
 
 public class Menu {
 
@@ -40,6 +43,7 @@ public class Menu {
 		}
 		if (choice == null) {
 			out.println("\n*** " + userInput + " is not a valid option ***\n");
+		} else if (choice == InventoryLoader.get(userInput)){
 		}
 		return choice;
 	}

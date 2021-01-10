@@ -27,20 +27,6 @@ public class Purchase {
 		this.inventory = inventory;
 	}
 
-	// Moved to InventoryLoader so the Vending Machine could display items
-//		public void displayInventory() {
-//			for (Map.Entry<String, Item> entry : inventory.entrySet()) {
-//				String key = entry.getKey();
-//				Item value = entry.getValue();
-//				if (value.getQuantity() == 0) {
-//					System.out.println(key + " Out of stock");
-//				} else {
-//
-//				}
-//				System.out.println(key + " " + (value.getQuantity() - 1));
-//			}
-//		}
-
 	public Map<String, Item> runPurchaseMenu() {
 		boolean running = true;
 		while (running) {
@@ -55,14 +41,15 @@ public class Purchase {
 
 					if (moneyChoice > 4 || moneyChoice < 1) {
 						System.out.println("Not a choice");
-					} else {
-						feedMoney(moneyChoice);
+					} else {feedMoney(moneyChoice);
 					}
 				} catch (InputMismatchException e) {
 					System.out.println("Enter a number between 1 and 4 with no decimal please");
 				}
 			} else if (choice.equals(PURCHASE_MENU_OPTION_PURCHASE)) {
+				System.out.println("Please input your slot ID");
 				sc = new Scanner(System.in);
+		// IS THIS NEEDED?		String guestSelection = mainInventory.nextLine();
 			}
 		}
 		return null;
@@ -138,22 +125,9 @@ public class Purchase {
 				return entry.getKey();
 			}
 		}
-
 		return "Non-Existant";
 	}
-	
-	
-	/*Old code
-	 * if (balance.compareTo(InventoryLoader.get(guestSelection).get(0).price) >= 0) {
-					balance = balance.subtract(InventoryLoader.get(guestSelection).get(0).price);
-					Item p = InventoryLoader.get(guestSelection).remove(0);
-					purchaseList.add(p);
-					Item cost = InventoryLoader.get(guestSelection).get(1);
-					BigDecimal costOne = cost.price;
-					Item nameOne = InventoryLoader.get(guestSelection).get(0);
-					String productOne = nameOne.name + " " + guestSelection;
-					writer.writer(productOne, costOne, balance);
-				}**/
-	 
-}
 
+	
+	}
+	
