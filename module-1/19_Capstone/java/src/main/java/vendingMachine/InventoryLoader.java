@@ -92,19 +92,19 @@ public class InventoryLoader {
 			String key = entry.getKey();
 			Item value = entry.getValue();
 			if (value.getQuantity() == 0) {
-				System.out.println(key + " Out of stock");
+				System.out.println("\n" + key + " *Out of stock*" + "\n");
 			} else {
-
+				System.out.println("Name: " + key + "\n" + "SlotID: " + (value.getSlot()) + "\n" + "Quantity: " + (value.getQuantity()) + "\n");
 			}
-			System.out.println(key + " " + (value.getQuantity())); 
+			 
 		}
 	}
 	
-	public static boolean containsKey(String guestSelection) {
-		
-		//return inventory.containsKey(guestSelection);
-		return false;
-	}
+//	public static boolean containsSlotId(String guestSelection) {
+//		
+//		
+//		return false;
+//	}
 
 	public static List<Item> get(String guestSelection) {
 		// TODO Auto-generated method stub

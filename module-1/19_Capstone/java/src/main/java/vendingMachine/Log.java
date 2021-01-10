@@ -15,7 +15,7 @@ public class Log {
 		LocalDate today = LocalDate.now();
 		LocalTime now = LocalTime.now();
 		
-		try (PrintWriter logWriter = new PrintWriter(new FileOutputStream(new File("./log.txt")))) {
+		try (PrintWriter logWriter = new PrintWriter(new FileOutputStream(new File("log.txt")))) {
 			
 			String printToday = today.toString();
 			String printNow = now.toString();
@@ -35,3 +35,5 @@ public class Log {
 	}
 
 }
+
+//Currently it is overwriting the first line of the log.txt file

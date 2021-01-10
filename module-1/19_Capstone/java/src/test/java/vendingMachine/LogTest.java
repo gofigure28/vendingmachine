@@ -12,6 +12,7 @@ public class LogTest {
 	
 	@Before
 	//Ask what Initialization error means
+	//@Before test isn't supposed to be run or tested individually. It automatically runs before each test labeled with a @Test annotation.
 	public void setUp() throws Exception {
 		testWriter.writer("Hello", new BigDecimal(2.410), new BigDecimal(3.428));
 	}

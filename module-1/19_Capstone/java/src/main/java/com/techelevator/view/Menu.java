@@ -5,10 +5,13 @@ import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
+import vendingMachine.Money;
+
 public class Menu {
 
 	private PrintWriter out;
 	private Scanner in;
+	
 
 	public Menu(InputStream input, OutputStream output) {
 		this.out = new PrintWriter(output);
@@ -43,11 +46,20 @@ public class Menu {
 
 	private void displayMenuOptions(Object[] options) {
 		out.println();
+		if(options[0].equals("Display Vending Machine Items")) {
 		for (int i = 0; i < options.length; i++) {
 			int optionNum = i + 1;
 			out.println(optionNum + ") " + options[i]);
 		}
 		out.print("\nPlease choose an option >>> ");
 		out.flush();
+		}else {
+			for (int i = 0; i < options.length; i++) {
+				int optionNum = i + 1;
+				out.println(optionNum + ") " + options[i]);
+			}
+			out.print("\nCurrent Money Provided: " + Money.getFormattedBalance() + "\n" + ">>>>>");
+			out.flush();
+		}
 	}
 }

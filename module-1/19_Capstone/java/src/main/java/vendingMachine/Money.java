@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 
 public class Money {
 
-	private int remainingBalance;
+	private static int remainingBalance = 0;
 	private int numberOfQuarters = 0;
 	private int numberOfDimes = 0;
 	private int numberOfNickels = 0;
@@ -33,11 +33,18 @@ public class Money {
 		return amountOfChange;
 	}
 
-	public String getFormattedBalance() {
+	public static String getFormattedBalance() {
 		int dollars = remainingBalance / 100;
 		int cents = remainingBalance - dollars * 100;
 		String centString = cents >= 10 ? "." + cents : ".0" + cents;
 		return "$" + dollars + centString;
 	}
 	//addToBalance method tracking current balance
+	public static int addToBalance(int moneyToAdd) {
+		return remainingBalance += (moneyToAdd * 100);
+	}
+	
+	public static int getBalance() {
+		return remainingBalance;
+	}
 }
