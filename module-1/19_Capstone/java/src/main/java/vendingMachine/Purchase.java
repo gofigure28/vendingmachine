@@ -49,7 +49,11 @@ public class Purchase {
 			} else if (choice.equals(PURCHASE_MENU_OPTION_PURCHASE)) {
 				System.out.println("Please input your slot ID");
 				sc = new Scanner(System.in);
+				//String slotID = sc.nextLine()
+				//purchase(slotID);
 		// IS THIS NEEDED?		String guestSelection = mainInventory.nextLine();
+			} else if (choice.equals(PURCHASE_MENU_OPTION_FINISH_TRANSACTION)) {
+				//todo
 			}
 		}
 		return null;

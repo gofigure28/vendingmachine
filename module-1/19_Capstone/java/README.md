@@ -1,4 +1,4 @@
-## Module 1 Capstone - Vending Machine Software
+git clone https://CodeDream11@bitbucket.org/te-ti-2011/capstone-1-team-2.git## Module 1 Capstone - Vending Machine Software
 
 You've been asked to develop an application for the newest vending machine distributor,
 Umbrella Corp. They've released a new vending machine, Vendo-Matic 800, that is integrated
